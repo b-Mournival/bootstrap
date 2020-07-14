@@ -1,47 +1,209 @@
+@charset "UTF-8";
 @import "bootstrap.css";
 @import "bootstrap-theme.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
 @import "fonts.css";
 @import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css";
-.navbar-default .navbar-nav > .active > a {
-  background: none;
-  box-shadow: none;
-}
-
-header .navbar {
+header .navbar-default {
   background: none;
   border: none;
   box-shadow: none;
   margin: 0;
 }
-header .navbar .container {
-  padding: 0;
-}
-header .navbar .container .navbar-header .navbar-brand {
-  font-family: "Lobster 1.3", serif;
-  font-size: 43px;
-  color: #44C0C2;
-  margin-top: 30px;
-}
-header .navbar .container .navbar-collapse {
+header .navbar-default .container .navbar-header {
+  padding: 30px 0 30px 15px;
   border: none;
 }
 @media screen and (min-width: 768px) {
-  header .navbar .container .navbar-collapse .navbar-right {
-    margin-right: -30px;
+  header .navbar-default .container .navbar-header {
+    padding-left: 0;
   }
 }
-header .navbar .container .navbar-collapse .navbar-right li a {
+header .navbar-default .container .navbar-header .navbar-brand {
+  font-family: "Lobster 1.3";
+  font-size: 43px;
+  color: #44C0C2;
+  line-height: 43px;
+  padding: 0;
+}
+header .navbar-default .container .navbar-header .navbar-toggle {
+  border-color: #44C0C2;
+  border-radius: 8px;
+  background-color: #f8f9fb;
+}
+header .navbar-default .container .navbar-header .navbar-toggle .icon-bar {
+  background-color: #44c0c2;
+}
+header .navbar-default .container .navbar-collapse {
+  padding: 0;
+  border: none;
+}
+header .navbar-default .container .navbar-collapse .navbar-nav {
+  text-align: right;
+  margin: 0;
+}
+header .navbar-default .container .navbar-collapse .navbar-nav li a {
   font-family: "Open Sans";
   font-size: 15px;
   color: #484C55;
-  padding: 45px 30px;
-  border-bottom: 3px transparent solid;
-  background-color: transparent;
-  transition: 0.2s;
+  padding: 10px 20px;
 }
-header .navbar .container .navbar-collapse .navbar-right li.active a, header .navbar .container .navbar-collapse .navbar-right li:hover a {
-  border-bottom: 3px #49CBCD solid;
-  background-color: #F8F9FB;
+@media screen and (min-width: 768px) {
+  header .navbar-default .container .navbar-collapse .navbar-nav li a {
+    padding: 45px 20px;
+  }
+}
+header .navbar-default .container .navbar-collapse .navbar-nav li a:after {
+  content: "";
+  display: block;
+}
+header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, header .navbar-default .container .navbar-collapse .navbar-nav li.active a {
+  border-bottom: 0 solid #2aabd2;
+  box-shadow: none;
+  background: #f8f9fb;
+  color: #2aabd2;
+}
+@media screen and (min-width: 768px) {
+  header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, header .navbar-default .container .navbar-collapse .navbar-nav li.active a {
+    border-bottom: 3px solid #2aabd2;
+  }
+}
+
+.banner .owl-carousel {
+  position: relative;
+}
+.banner .owl-carousel .carousel-item .carousel-caption {
+  text-shadow: none;
+  padding: 0;
+  bottom: 25%;
+  transform: scale(0.4);
+}
+@media screen and (min-width: 768px) {
+  .banner .owl-carousel .carousel-item .carousel-caption {
+    bottom: 60px;
+    transform: scale(0.5);
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner .owl-carousel .carousel-item .carousel-caption {
+    transform: scale(0.7);
+    top: 30px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .banner .owl-carousel .carousel-item .carousel-caption {
+    transform: scale(1);
+    top: 140px;
+  }
+}
+.banner .owl-carousel .carousel-item .carousel-caption h3 {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 63px;
+  line-height: 63px;
+  margin-bottom: 45px;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .banner .owl-carousel .carousel-item .carousel-caption h3 {
+    display: block;
+  }
+}
+.banner .owl-carousel .carousel-item .carousel-caption p {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 23px;
+  margin-bottom: 60px;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .banner .owl-carousel .carousel-item .carousel-caption p {
+    display: block;
+  }
+}
+.banner .owl-carousel .carousel-item .carousel-caption a {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 26px;
+  padding: 20px 30px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+@media screen and (min-width: 992px) {
+  .banner .owl-carousel .carousel-item .carousel-caption a {
+    padding: 20px 40px;
+  }
+}
+.banner .owl-carousel .owl-nav {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  right: 30px;
+  margin-top: -25px;
+}
+@media screen and (min-width: 768px) {
+  .banner .owl-carousel .owl-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.banner .owl-carousel .owl-nav .owl-prev:after {
+  content: "";
+  display: block;
+}
+.banner .owl-carousel .owl-nav .owl-next:after {
+  content: "";
+  display: block;
+}
+.banner .owl-carousel .owl-nav .owl-prev, .banner .owl-carousel .owl-nav .owl-next {
+  outline: none;
+}
+.banner .owl-carousel .owl-nav .owl-prev:after, .banner .owl-carousel .owl-nav .owl-next:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #44C0C2;
+  font-size: 26px;
+  background-color: white;
+  border-radius: 50%;
+}
+.banner .owl-carousel .owl-dots {
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .banner .owl-carousel .owl-dots {
+    display: none;
+  }
+}
+.banner .owl-carousel .owl-dots .owl-dot {
+  outline: none;
+}
+.banner .owl-carousel .owl-dots .owl-dot span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #abdcff;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.banner .owl-carousel .owl-dots .owl-dot.active span {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  bottom: -2px;
 }
 
 /*# sourceMappingURL=style.css.map */
