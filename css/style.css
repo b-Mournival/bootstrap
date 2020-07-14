@@ -5,6 +5,10 @@
 @import "owl.theme.default.min.css";
 @import "fonts.css";
 @import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css";
+* {
+  font-family: "Open Sans";
+}
+
 header .navbar-default {
   background: none;
   border: none;
@@ -44,7 +48,6 @@ header .navbar-default .container .navbar-collapse .navbar-nav {
   margin: 0;
 }
 header .navbar-default .container .navbar-collapse .navbar-nav li a {
-  font-family: "Open Sans";
   font-size: 15px;
   color: #484C55;
   padding: 10px 20px;
@@ -98,7 +101,6 @@ header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, heade
   }
 }
 .banner .owl-carousel .carousel-item .carousel-caption h3 {
-  font-family: "Open Sans";
   font-weight: 600;
   font-size: 63px;
   line-height: 63px;
@@ -111,7 +113,6 @@ header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, heade
   }
 }
 .banner .owl-carousel .carousel-item .carousel-caption p {
-  font-family: "Open Sans";
   font-weight: 400;
   font-size: 23px;
   margin-bottom: 60px;
@@ -123,7 +124,6 @@ header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, heade
   }
 }
 .banner .owl-carousel .carousel-item .carousel-caption a {
-  font-family: "Open Sans";
   font-weight: 600;
   font-size: 26px;
   line-height: 26px;
@@ -204,6 +204,184 @@ header .navbar-default .container .navbar-collapse .navbar-nav li:hover a, heade
   height: 8px;
   position: relative;
   bottom: -2px;
+}
+
+.team {
+  padding: 110px 0;
+}
+.team h2 {
+  font-weight: 400;
+  color: #4e525d;
+  font-size: 42px;
+  margin-bottom: 140px;
+}
+.team .user {
+  width: 200px;
+  height: 200px;
+  background-color: silver;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.team .user img {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.team .user:before {
+  content: "+";
+  position: absolute;
+  display: block;
+  color: red;
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 200px;
+  top: -100%;
+  transition: 5s;
+  cursor: pointer;
+}
+.team .user:hover:before {
+  top: 0;
+  transform: rotate(2160deg);
+}
+.team h4 {
+  line-height: 22px;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.team h4 span {
+  margin-top: 15px;
+  line-height: 14px;
+  font-size: 14px;
+  display: block;
+}
+.team p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.plans {
+  background-color: #f1f1f1;
+  padding: 120px 0 100px;
+}
+.plans ul {
+  margin-bottom: 50px;
+  list-style: none;
+}
+.plans ul li {
+  padding: 15px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ecf0f1;
+}
+.plans ul li .btn {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 17px;
+  color: white;
+  background-color: #788492;
+  padding: 10px 55px;
+}
+.plans ul li:first-of-type {
+  background-color: #485460;
+  padding: 30px 0;
+  color: white;
+  font-size: 26px;
+  line-height: 26px;
+}
+.plans ul li:nth-child(2) {
+  background-color: #f8f9fb;
+  padding: 30px 0;
+  color: #485460;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.plans ul li:last-of-type {
+  background-color: #f8f9fb;
+  padding: 30px 0;
+}
+.plans ul:nth-child(2) li:first-of-type, .plans ul:nth-child(2) li a {
+  background-color: #49cbcd;
+}
+
+footer {
+  background: url("../images/footer_bg.jpg") top center no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+footer h3 {
+  font-size: 42px;
+  color: #ffffff;
+  line-height: 42px;
+  margin-bottom: 120px;
+}
+footer .info h4 {
+  font-size: 24px;
+  color: white;
+  line-height: 24px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+footer .info p {
+  line-height: 21px;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 40px;
+}
+footer .info .social {
+  margin-bottom: 22px;
+}
+footer .info .social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+footer .info .social a:hover {
+  background-color: #3ec2f3;
+  border-color: #3ec2f3;
+  text-decoration: none;
+}
+footer .info .social a:first-of-type:hover {
+  background-color: #3b5997;
+  border-color: #3b5997;
+}
+footer .info .social a:last-of-type:hover {
+  background-color: #e44c41;
+  border-color: #e44c41;
+}
+footer .info .footer_contact {
+  font-size: 14px;
+  line-height: 24px;
+  color: #bface2;
+}
+footer .info .footer_contact a {
+  text-decoration: none;
+  color: #bface2;
+}
+footer form {
+  outline: none;
+}
+footer form div input, footer form div textarea {
+  margin-bottom: 15px;
+}
+footer form div textarea {
+  resize: none;
+  min-height: 180px;
+}
+footer form div .btn-info {
+  background: #49cbcd;
+  width: 100%;
+  border-radius: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */
